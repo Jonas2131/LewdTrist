@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
- 
+const token = process.env.token; 
+
 client.on("ready", () => {
   console.log("I am ready!"),
   client.user.setGame('type !lewdt') ;
@@ -298,4 +299,4 @@ client.on("message", (message) => {
   }
 });
  
-client.login("NDk1NjQ3NDA5MDI4OTg4OTI5.DpGSwQ.MTYmWC85ydet7HMxlKVYFuQEheA");
+client.login(token).catch(err => console.log(err));
